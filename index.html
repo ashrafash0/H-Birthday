@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎉 Happy Birthday Arshiya </title>
+
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+overflow:hidden;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(-45deg,#ff4e9b,#ff758c,#6a5acd,#00c6ff,#ffcc70);
+background-size:500% 500%;
+animation:bgMove 15s ease infinite;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+position:relative;
+width:90%;
+max-width:720px;
+padding:30px;
+border-radius:25px;
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+box-shadow:0 0 40px rgba(255,255,255,.35);
+text-align:center;
+color:white;
+z-index:20;
+}
+
+h1{
+font-size:42px;
+animation:pulse 2s infinite;
+margin-bottom:20px;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.05);}
+}
+
+p{
+font-size:20px;
+line-height:1.8;
+}
+
+footer{
+margin-top:25px;
+font-size:24px;
+font-weight:bold;
+}
+
+.gift{
+margin:20px auto;
+position:relative;
+width:120px;
+height:120px;
+cursor:pointer;
+}
+
+.box{
+position:absolute;
+bottom:0;
+width:120px;
+height:80px;
+background:#ff3366;
+border-radius:8px;
+}
+
+.lid{
+position:absolute;
+top:20px;
+width:120px;
+height:20px;
+background:#ff5c8d;
+transition:.8s;
+transform-origin:left;
+}
+
+.ribbonV{
+position:absolute;
+left:54px;
+width:12px;
+height:120px;
+background:gold;
+}
+
+.ribbonH{
+position:absolute;
+top:52px;
+width:120px;
+height:12px;
+background:gold;
+}
+
+.gift.open .lid{
+transform:rotate(-35deg);
+}
+
+.cake{
+display:none;
+margin:20px auto;
+position:relative;
+width:180px;
+height:220px;
+}
+
+.layer1,.layer2,.layer3{
+position:absolute;
+left:20px;
+width:140px;
+border-radius:10px;
+}
+
+.layer1{
+height:60px;
+bottom:0;
+background:#c97b36;
+}
+
+.layer2{
+height:50px;
+bottom:60px;
+background:#ffb347;
+}
+
+.layer3{
+height:40px;
+bottom:110px;
+background:#ff69b4;
+}
+
+.icing{
+position:absolute;
+width:150px;
+height:18px;
+background:white;
+bottom:145px;
+left:15px;
+border-radius:10px;
+}
+
+.candle{
+position:absolute;
+width:10px;
+height:45px;
+background:#00ffff;
+left:85px;
+bottom:160px;
+}
+
+.flame{
+position:absolute;
+width:18px;
+height:28px;
+background:gold;
+left:81px;
+bottom:202px;
+border-radius:50%;
+box-shadow:0 0 25px gold;
+animation:flicker .4s infinite alternate;
+}
+
+@keyframes flicker{
+to{
+transform:scale(1.2);
+box-shadow:0 0 45px yellow;
+}
+}
+.balloon{
+position:absolute;
+bottom:-120px;
+width:60px;
+height:80px;
+border-radius:50%;
+animation:float linear infinite;
+}
+
+.balloon:after{
+content:"";
+position:absolute;
+width:2px;
+height:70px;
+background:white;
+left:50%;
+top:80px;
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-130vh);}
+}
+
+.heart{
+position:absolute;
+font-size:24px;
+color:#ff2d55;
+animation:heartUp linear infinite;
+}
+
+@keyframes heartUp{
+from{
+transform:translateY(110vh) scale(.5);
+opacity:1;
+}
+to{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+}
+
+.confetti{
+position:absolute;
+width:10px;
+height:10px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-100vh) rotate(0deg);
+}
+to{
+transform:translateY(120vh) rotate(720deg);
+}
+}
+
+.star{
+position:absolute;
+font-size:20px;
+color:white;
+animation:twinkle 2s infinite;
+}
+
+@keyframes twinkle{
+50%{
+opacity:.3;
+}
+}
+
+.firework{
+position:absolute;
+font-size:35px;
+display:none;
+animation:boom 1s infinite;
+}
+
+@keyframes boom{
+0%{
+transform:scale(.2);
+opacity:1;
+}
+100%{
+transform:scale(2.8);
+opacity:0;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1 id="title">🎁 Click the Gift Box Below 🎁</h1>
+
+<p id="subtitle">
+A Message is waiting for you...<br><br>
+👇 👇
+</p>
+
+<div class="gift" id="gift">
+<div class="lid"></div>
+<div class="box"></div>
+<div class="ribbonV"></div>
+<div class="ribbonH"></div>
+</div>
+
+<div class="cake" id="cake">
+<div class="layer1"></div>
+<div class="layer2"></div>
+<div class="layer3"></div>
+<div class="icing"></div>
+<div class="candle"></div>
+<div class="flame"></div>
+</div>
+
+<div id="message" style="display:none">
+
+<p>
+
+Happy Birthday! 🎉
+
+<br><br>
+
+May Allah bless you with good health, endless happiness, strong faith, and success in this life and the Hereafter.
+
+<br><br>
+
+May He accept your duas, forgive your sins, and fill your heart with peace and barakah.
+
+<br><br>
+
+<b>Ameen 🤲</b>
+
+<br><br>
+
+Have a beautiful year ahead!
+
+</p>
+
+<footer>
+—Ashu
+</footer>
+
+</div>
+
+<div class="firework" id="fw1" style="left:10%;top:20%">🎆</div>
+<div class="firework" id="fw2" style="right:10%;top:20%">🎇</div>
+<div class="firework" id="fw3" style="left:45%;top:10%">✨</div>
+
+<audio id="bgMusic" autoplay loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const colors=[
+"red","blue","yellow","green",
+"orange","pink","purple","cyan"
+];
+
+// Balloons
+for(let i=0;i<40;i++){
+let b=document.createElement("div");
+b.className="balloon";
+b.style.left=Math.random()*100+"vw";
+b.style.background=colors[Math.floor(Math.random()*colors.length)];
+b.style.animationDuration=(6+Math.random()*6)+"s";
+document.body.appendChild(b);
+}
+
+// Hearts
+for(let i=0;i<80;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤";
+h.style.left=Math.random()*100+"vw";
+h.style.animationDuration=(5+Math.random()*8)+"s";
+h.style.fontSize=(15+Math.random()*20)+"px";
+document.body.appendChild(h);
+}
+
+// Confetti
+for(let i=0;i<200;i++){
+let c=document.createElement("div");
+c.className="confetti";
+c.style.left=Math.random()*100+"vw";
+c.style.background=colors[Math.floor(Math.random()*colors.length)];
+c.style.animationDuration=(3+Math.random()*5)+"s";
+document.body.appendChild(c);
+}
+
+// Sparkles
+for(let i=0;i<50;i++){
+let s=document.createElement("div");
+s.className="star";
+s.innerHTML="✨";
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+s.style.animationDelay=Math.random()*2+"s";
+document.body.appendChild(s);
+}
+
+// Music
+const music=document.getElementById("bgMusic");
+music.volume=0.7;
+
+document.addEventListener("click",function(){
+music.play().catch(()=>{});
+},{once:true});
+
+// Gift animation
+document.getElementById("gift").onclick=function(){
+
+this.classList.add("open");
+
+setTimeout(()=>{
+
+this.style.display="none";
+
+document.getElementById("title").innerHTML="🎉 Happy Birthday Arshiya 🎉";
+
+document.getElementById("subtitle").style.display="none";
+
+document.getElementById("cake").style.display="block";
+
+document.getElementById("message").style.display="block";
+
+document.getElementById("fw1").style.display="block";
+document.getElementById("fw2").style.display="block";
+document.getElementById("fw3").style.display="block";
+
+},800);
+
+};
+
+</script>
+
+</body>
+</html>
